@@ -65,6 +65,7 @@ for index, row in df.iterrows():
     # phone_number = "+919045907963"
     # Send the message (using the 24-hour format for the time)
     kit.sendwhatmsg_instantly(phone_number, message, wait_time=7, tab_close=True)
+    # kit.sendwhats_image(phone_number, IMAGE_PATH, message, wait_time=7, tab_close=True)
 
     row['Name'] = row['Name'] + '(Done)'
     df.to_csv(DATABASE_PATH)
