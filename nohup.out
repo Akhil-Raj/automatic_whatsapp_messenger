@@ -1,0 +1,733 @@
+Index : 6
+First name : Bhavya
+Phone number : 2012419191
+Status : To be reached out
+Appended US country code to the number. New number : +12012419191
+Sending Message : Hare Krishna Bhavya! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12012419191
+Traceback (most recent call last):
+  File "/Volumes/Akhil/GitHubRepos/automatic_whatsapp_messenger/main.py", line 1, in <module>
+    import pywhatkit as kit
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/pywhatkit/__init__.py", line 16, in <module>
+    from pywhatkit.whats import (
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/pywhatkit/whats.py", line 13, in <module>
+    core.check_connection()
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/pywhatkit/core/core.py", line 39, in check_connection
+    requests.get("https://google.com")
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/sessions.py", line 725, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/sessions.py", line 725, in <listcomp>
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/connection.py", line 783, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 471, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 515, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/akhil/anaconda3/lib/python3.11/ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "/Users/akhil/anaconda3/lib/python3.11/ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+KeyboardInterrupt
+2024-08-12 21:28:29.051 osascript[19207:327520] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:28:41.221 osascript[19213:327670] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:28:53.370 osascript[19232:327866] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:29:05.561 osascript[19243:328111] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:29:17.789 osascript[19253:328399] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:29:29.954 osascript[19258:328563] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:29:42.129 osascript[19273:329028] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:29:54.278 osascript[19313:329234] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:30:06.449 osascript[19326:329515] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:30:18.619 osascript[19357:329945] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:30:30.719 osascript[19376:330419] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+Index : 6
+First name : Bhavya
+Phone number : 2012419191
+Status : To be reached out
+Appended US country code to the number. New number : +12012419191
+Sending Message : Hare Krishna Bhavya! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12012419191
+Index : 7
+First name : Harsha
+Phone number : 5513316529
+Status : To be reached out
+Appended US country code to the number. New number : +15513316529
+Sending Message : Hare Krishna Harsha! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15513316529
+Index : 8
+First name : mithin
+Phone number : 9298664385
+Status : To be reached out
+Appended US country code to the number. New number : +19298664385
+Sending Message : Hare Krishna mithin! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +19298664385
+Index : 9
+First name : Nagendar
+Phone number : 5513441902
+Status : To be reached out
+Appended US country code to the number. New number : +15513441902
+Sending Message : Hare Krishna Nagendar! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15513441902
+Index : 10
+First name : Omkar
+Phone number : 5515548486
+Status : To be reached out
+Appended US country code to the number. New number : +15515548486
+Sending Message : Hare Krishna Omkar! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15515548486
+Index : 11
+First name : Rahul
+Phone number : 3478455951
+Status : To be reached out
+Appended US country code to the number. New number : +13478455951
+Sending Message : Hare Krishna Rahul! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +13478455951
+Index : 12
+First name : Shail
+Phone number : 2016169548
+Status : To be reached out
+Appended US country code to the number. New number : +12016169548
+Sending Message : Hare Krishna Shail! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12016169548
+Index : 13
+First name : soumojet
+Phone number : 7186908012
+Status : To be reached out
+Appended US country code to the number. New number : +17186908012
+Sending Message : Hare Krishna soumojet! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +17186908012
+Index : 14
+First name : Tarun
+Phone number : 2017056766
+Status : To be reached out
+Appended US country code to the number. New number : +12017056766
+Sending Message : Hare Krishna Tarun! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12017056766
+Index : 15
+First name : Shashankk
+Phone number : 5512608780
+Status : To be reached out
+Appended US country code to the number. New number : +15512608780
+Sending Message : Hare Krishna Shashankk! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15512608780
+Index : 16
+First name : Chakri
+Phone number : 2033936367
+Status : To be reached out
+Appended US country code to the number. New number : +12033936367
+Sending Message : Hare Krishna Chakri! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12033936367
+Index : 17
+First name : Chintan
+Phone number : 2036910199
+Status : To be reached out
+2024-08-12 21:30:42.844 osascript[19387:330770] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:30:54.989 osascript[19394:330918] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:31:07.140 osascript[19414:331183] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:31:19.299 osascript[19423:331385] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:31:31.441 osascript[19433:331611] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:31:43.687 osascript[19451:331955] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:31:55.858 osascript[19482:332249] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:32:07.981 osascript[19514:332600] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:32:20.103 osascript[19532:333008] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:32:32.255 osascript[19545:333230] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:32:44.412 osascript[19553:333481] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+Appended US country code to the number. New number : +12036910199
+Sending Message : Hare Krishna Chintan! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12036910199
+Index : 18
+First name : Dipit
+Phone number : 3476999484
+Status : To be reached out
+Appended US country code to the number. New number : +13476999484
+Sending Message : Hare Krishna Dipit! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +13476999484
+Index : 19
+First name : Feneel
+Phone number : 5513278461
+Status : To be reached out
+Appended US country code to the number. New number : +15513278461
+Sending Message : Hare Krishna Feneel! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15513278461
+Index : 20
+First name : Ganesh
+Phone number : 3475431736
+Status : To be reached out
+Appended US country code to the number. New number : +13475431736
+Sending Message : Hare Krishna Ganesh! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +13475431736
+Index : 21
+First name : Hardik
+Phone number : 5513523804
+Status : To be reached out
+Appended US country code to the number. New number : +15513523804
+Sending Message : Hare Krishna Hardik! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15513523804
+Index : 22
+First name : Mrunal
+Phone number : 2012387551
+Status : To be reached out
+Appended US country code to the number. New number : +12012387551
+Sending Message : Hare Krishna Mrunal! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +12012387551
+Index : 23
+First name : Sunil
+Phone number : 5512858333
+Status : To be reached out
+Appended US country code to the number. New number : +15512858333
+Sending Message : Hare Krishna Sunil! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15512858333
+Index : 24
+First name : Adhithya
+Phone number : 8622568441
+Status : To be reached out
+Appended US country code to the number. New number : +18622568441
+Sending Message : Hare Krishna Adhithya! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +18622568441
+Index : 25
+First name : Kurra
+Phone number : 5512298693
+Status : To be reached out
+Appended US country code to the number. New number : +15512298693
+Sending Message : Hare Krishna Kurra! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15512298693
+Index : 26
+First name : nisharg
+Phone number : 3472745708
+Status : To be reached out
+Appended US country code to the number. New number : +13472745708
+Sending Message : Hare Krishna nisharg! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +13472745708
+Index : 27
+First name : Rahul
+Phone number : 5519982040
+Status : To be reached out
+Appended US country code to the number. New number : +15519982040
+Sending Message : Hare Krishna Rahul! 🙏🏻
+
+Gita Life NYC is delighted to invite you to our 16th Monthly Youth festival 🥳
+
+What’s in it for you?
+
+DARSHAN AND AARTI 🪔
+SPIRITUAL TALK 🎤
+DANCING KIRTAN 🪘
+PRASADAM FEAST 🥗
+SPECIAL EVENT 🪩
+
+& we will be honoring all the INSPIRE Donors!
+
+Date: August 17, 2024 (Saturday)
+Time: 5:30 PM onwards
+
+Registration Link: https://forms.gle/BezjbytdG7F3beTV8
+
+Don't hesitate! 🤔🤔 Register now ☝🏻☝🏻☝🏻 and embrace the opportunity to interact, learn, and grow!
+
+See you soon! 🙂
+receiver :  +15519982040
+Index : 28
+First name : shubham
+Phone number : 9179141683+918368452811
+Status : To be reached out
+Sending Message : 2024-08-12 21:38:03.938 osascript[20010:339261] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:38:16.084 osascript[20043:339646] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
+2024-08-12 21:38:28.201 osascript[20047:339799] CFURLGetFSRef was passed a URL which has no scheme (the URL will not work with other CFURL routines)
