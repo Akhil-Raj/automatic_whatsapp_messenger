@@ -105,23 +105,23 @@ for index, row in df_include.iterrows():
         if skip:
             continue
         # breakpoint()
-        status = row['Oct MYF']
+        status = row['Nov MYF']
         # assert status == "To be reached out"
         print(f"Index : {index}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
+
         registered_message = f"🎉 Hare Krishna {first_name}!🎉\nJoin us for a Spectacular Evening! \n\n📅 Tomorrow's the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟\n\n📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn\n\n⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.\n\n🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. \n\nIf you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).\n\nCan't wait to see you there! 🙏"
         # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
         reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
-        first_message = f"Hare Krishna {first_name}! 🙏🏻\n\nGita Life NYC warmly invites you to our Monthly Youth Festival! 🥳\n\nWhat’s in store for you?\n\n🎭 Drama Performance\n🎤 Spiritual Discourse\n🪘 Vibrant Kirtan Dancing\n😋 Sumptuous Prasadam Feast\n\n🗓 Date: October 5, 2024 (Saturday)\n⏰ Time: Starting at 5:30 PM\n📍 Venue: 305 Schermerhorn St, Brooklyn\n\nSign up here: https://forms.gle/P64hwdFEdzbDYyL18\n\nDon't miss out! 🤔 Register now ☝🏻 and seize this opportunity to engage, learn, and grow!\n\nSee you there! 🙂"
+        first_message = f"Hare Krishna {first_name}! 🙏🏻\n\nGita Life NYC warmly invites you to our next Monthly Youth Festival! 🥳\n\nClick on the following link for More Info and Register!\n\nhttps://gita-life-website-eti4-akhilrajs-projects-7e0eaba0.vercel.app/events?info=true\n\nSee you soon! 🌟"
         present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
         registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
 
         if status == "To be reached out":
-            continue
             message = first_message
         elif status == "No" or status == "Numer Invalid / Moved out of NYC":
             continue
         elif status in ["Yes, Registration link sent", "didn't pick message sent", "Didn't pick up", "Registration sent w/o calling", "Call back/Not sure"]:
-            # continue
+            continue
             message = reminder_message
         elif status == "Registered":
             continue
