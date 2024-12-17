@@ -7,9 +7,11 @@ import json
 import pyautogui
 import time
 from pywhatkit.core import core
+from oneClickRegistrationTest import *
 
 # Take a screenshot and save it
 def take_screenshot(save_path):
+    return
     screenshot = pyautogui.screenshot()
     screenshot.save(save_path)
 
@@ -87,6 +89,7 @@ for index, row in df_include.iterrows():
     if first_name == "RAK":
         first_name = "Rakshit"
     phone_numbers_string = str(row['Contact'])
+    print("original phone_numbers_string : ", phone_numbers_string)
     phone_numbers_string_list = get_pure_numbers_string(phone_numbers_string)
     # phone_numbers_string = str(row['WhatsApp Number'])
     # if phone_numbers_string != 'nan':
@@ -95,6 +98,8 @@ for index, row in df_include.iterrows():
     phone_numbers_string_list = list(set(phone_numbers_string_list))
     print(phone_numbers_string_list)
     for phone_number in phone_numbers_string_list:
+        test_get_name_from_phone(phone_number)
+        test_mark_registered(phone_number)
         skip = False
 
         for number in numbers_not_on_whatsapp:
@@ -105,14 +110,43 @@ for index, row in df_include.iterrows():
         if skip:
             continue
         # breakpoint()
-        status = row['Nov MYF']
+        status = row['Dec MYF']
         # assert status == "To be reached out"
-        print(f"Index : {index}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
+        print(f"Row Number in sheet : {index + 2}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
 
-        registered_message = f"🎉 Hare Krishna {first_name}!🎉\nJoin us for a Spectacular Evening! \n\n📅 Tomorrow's the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟\n\n📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn\n\n⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.\n\n🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. \n\nIf you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).\n\nCan't wait to see you there! 🙏"
+        registered_message = f"""🎉 Hare Krishna {first_name}!🎉
+Join us for a Spectacular Evening! 
+
+📅 Today is the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
+
+📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn
+
+⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.
+
+🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. 
+
+If you want to volunteer for different services, please feel free to contact (Suraj: +18623658118).
+
+Can't wait to see you there! 🙏"""
         # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
         reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
-        first_message = f"Hare Krishna {first_name}! 🙏🏻\n\nGita Life NYC warmly invites you to our next Monthly Youth Festival! 🥳\n\nClick on the following link for More Info and Register!\n\nhttps://gita-life-website-eti4-akhilrajs-projects-7e0eaba0.vercel.app/events?info=true\n\nSee you soon! 🌟"
+        first_message = f"""🎄✨ The Christmas Party You Can’t Miss! ✨🎄
+
+Hey {first_name}!
+
+This Saturday, December 21, 2024 at 5:30 PM, we’re hosting a magical Christmas Party at 305 Schermerhorn St, Brooklyn—and you’re invited! 🌟
+
+🎉 Here’s why you’ll love it:
+🎭 Special Drama Performance: Watch a heart-touching play that’s full of festive spirit!
+🎶 Dancing Kirtan: Feel the energy, move to the rhythm, and let your soul sing!
+🍛 Free Festive Dinner: Think mouthwatering, soul-nourishing food that will leave you glowing!
+🌟 Inspiring Talks & Cozy Vibes: A heartwarming evening to uplift and refresh you.
+
+✨ It’s Free. It’s Fun. It’s Unforgettable. 🎁
+
+🎄 Bring your friends and let’s make this an evening to remember. Register on the link below to confirm your seat!
+
+https://www.gitalifenyc.com/registerbylink?phone={phone_number}"""
         present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
         registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
 
@@ -120,7 +154,7 @@ for index, row in df_include.iterrows():
             message = first_message
         elif status == "No" or status == "Numer Invalid / Moved out of NYC":
             continue
-        elif status in ["Yes, Registration link sent", "didn't pick message sent", "Didn't pick up", "Registration sent w/o calling", "Call back/Not sure"]:
+        elif status in ["Yes, Registration link sent", "didn't pick message sent", "Didn't pick up", "Registration sent w/o calling", "Call back/Not sure", "Switched Off/Out of Range"]:
             continue
             message = reminder_message
         elif status == "Registered":
@@ -137,19 +171,20 @@ for index, row in df_include.iterrows():
         else :
             print("CASE NOT COVERED ERROR. STATUS : ", status)
             exit(1)
+        
 
-        print("Sending Message :", message)
+        if True:
+            print("Sending Message :", message)
+            # phone_number = "+919045907963"
+            # Send the message (using the 24-hour format for the time)
+            kit.sendwhatmsg_instantly(phone_number, message, wait_time=7, tab_close=False)
+            # kit.sendwhats_image(phone_number, IMAGE_PATH, message, wait_time=7, tab_close=False)
+            time.sleep(5)
+            take_screenshot(os.path.join("./screenshots", first_name + "___" + phone_number + ".png"))
+            core.close_tab(wait_time=0)
 
-        # phone_number = "+919045907963"
-        # Send the message (using the 24-hour format for the time)
-        # kit.sendwhatmsg_instantly(phone_number, message, wait_time=7, tab_close=False)
-        kit.sendwhats_image(phone_number, IMAGE_PATH, message, wait_time=7, tab_close=False)
-        time.sleep(3)
-        take_screenshot(os.path.join("./screenshots", first_name + "___" + phone_number + ".png"))
-        core.close_tab(wait_time=0)
-
-        row['Name'] = row['Name'] + '(Done)'
-        df_include.to_csv(DATABASE_PATH_INCLUDE)
+            row['Name'] = row['Name'] + '(Done)'
+            df_include.to_csv(DATABASE_PATH_INCLUDE)
 
 
 print("Messages sent successfully!")
