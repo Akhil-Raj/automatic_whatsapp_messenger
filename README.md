@@ -1,7 +1,7 @@
 # Steps to run
 
 - Clone the repo
-- Download the myf followup sheet in the project's root. Rename it as "MYF followup Master - MYF attendees.csv", replacing any existing file with that name.
+- Download the myf followup sheet in the project's root. Rename it as "MYF followup Master - MYF attendees.csv", replacing any existing file with that name. Note that if you make any change(s) to the MYF Followup sheet, you must download it again for the changes to be accessible to the script.
 - Store the image that you want to attach with the message as 'Image.jpeg' in the project's root.
 - Open the file 'mainFollowupSheet.py' and do these changes :
 - - To send message to all those with status "Registered", change the "registered_message" variable.

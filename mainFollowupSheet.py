@@ -143,16 +143,16 @@ Can't wait to see you there! 🙏"""
         reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
         first_message = f"""Hi {first_name}!
         
-🌟 Gita Life NYC invites you for our Monthly Youth Festival! 🌟
+🌟 Gita Life NYC invites you for our 21st Monthly Youth Festival! 🌟
 
-Get ready for a day full of inspiration, joy, and unforgettable memories! 🎉
+Get ready for an evening filled with inspiration, joy, and unforgettable memories! 🎉
 
 Join us for a spiritual journey featuring:
 
-✨ Enlightening Spiritual Talk by Tulasi Dasa (traveling monk, author, known for his ecstatic kirtans)
-🎭 Drama Performances – Witness incredible performances that will touch your heart!
+✨ Enlightening Spiritual Talk by Tulasi Prabhu (traveling monk, author, known for his ecstatic kirtans)
+🎭 Drama Performance – Witness incredible performances that will touch your heart!
 🕺🏼 Dancing kirtan – Let loose, groove to the beat, and celebrate with us!
-🍽️ Feast prasadam– have delicious prasadm and enjoy great company!
+🍽️ Feast prasadam– have delicious prasadam and enjoy great company!
 and much more….
 
 🗓️ Date: 22nd February (Saturday)
@@ -161,7 +161,7 @@ and much more….
 
 Register NOW: https://www.gitalifenyc.com/registerbylink?phone={phone_number}
 
-See you soon 🎊"""
+Share with your friends 🌟🌟🌟"""
         present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
         registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
         extra_message = f"""We have implemented one-click registration this time, so you don’t need to fill in your details manually. We would appreciate any feedback about it!"""
