@@ -11,9 +11,10 @@ from oneClickRegistrationTest import *
 
 # Take a screenshot and save it
 def take_screenshot(save_path):
-    return
+    # return
     screenshot = pyautogui.screenshot()
     screenshot.save(save_path)
+
 
 def get_pure_numbers_string(number_string):
     numbers = number_string.split("/") if "/" in number_string else number_string.split(",")
@@ -24,7 +25,8 @@ def get_pure_numbers_string(number_string):
                 result += char
         if '+91' not in result and '+1' not in result and '+95' not in result:
             result = '+1' + result
-            print(f'Appended US country code to the number. New number : {result}')
+            if True:
+                print(f'Appended US country code to the number. New number : {result}')
         numbers[ind] = result
     return numbers
 
@@ -59,7 +61,10 @@ END_ROW_NUMBER = int(sys.argv[i])
 # row number in sheet = index + 2
 START_INDEX = START_ROW_NUMBER - 2
 END_INDEX = END_ROW_NUMBER - 2
-IMAGE_PATH = "image.jpeg"
+IMAGE_PATH = "./image.jpeg"
+# Convert to absolute path
+IMAGE_PATH = os.path.abspath(IMAGE_PATH)
+print("IAMGE EXISTS : ", os.path.isfile(IMAGE_PATH))
 
 # Ensure the image exists
 if not os.path.isfile(IMAGE_PATH):
@@ -89,32 +94,38 @@ for index, row in df_include.iterrows():
     if first_name == "RAK":
         first_name = "Rakshit"
     phone_numbers_string = str(row['Contact'])
-    print("original phone_numbers_string : ", phone_numbers_string)
+    if True:
+        print("original phone_numbers_string : ", phone_numbers_string)
     phone_numbers_string_list = get_pure_numbers_string(phone_numbers_string)
     # phone_numbers_string = str(row['WhatsApp Number'])
     # if phone_numbers_string != 'nan':
     #     phone_numbers_string_list.extend(get_pure_numbers_string(phone_numbers_string))
     # breakpoint()
     phone_numbers_string_list = list(set(phone_numbers_string_list))
-    print(phone_numbers_string_list)
+    if True:
+        print(phone_numbers_string_list)
     for phone_number in phone_numbers_string_list:
-        test_get_name_from_phone(phone_number)
-        test_mark_registered(phone_number)
-        skip = False
+        if False:
+            print(f"https://www.gitalifenyc.com/registerbylink?phone={phone_number}", end=" ")
+        if False: # For Testing
+            test_get_name_from_phone(phone_number)
+            test_mark_registered(phone_number)
 
         for number in numbers_not_on_whatsapp:
             if number in phone_number:
-                print("Number not on whatsapp : ", phone_number)
+                if True:
+                    print("Number not on whatsapp : ", phone_number)
                 skip = True
                 break
-        if skip:
+        if False:
             continue
         # breakpoint()
-        status = row['Dec MYF']
+        status = row['Feb MYF']
         # assert status == "To be reached out"
-        print(f"Row Number in sheet : {index + 2}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
+        if True:
+            print(f"Row Number in sheet : {index + 2}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
 
-        registered_message = f"""🎉 Hare Krishna {first_name}!🎉
+        registered_message = f"""🎉 Hare Krishna!🎉
 Join us for a Spectacular Evening! 
 
 📅 Today is the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
@@ -125,32 +136,38 @@ Join us for a Spectacular Evening!
 
 🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. 
 
-If you want to volunteer for different services, please feel free to contact (Suraj: +18623658118).
+If you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).
 
 Can't wait to see you there! 🙏"""
         # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
         reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
-        first_message = f"""🎄✨ The Christmas Party You Can’t Miss! ✨🎄
+        first_message = f"""Hi {first_name}!
+        
+🌟 Gita Life NYC invites you for our Monthly Youth Festival! 🌟
 
-Hey {first_name}!
+Get ready for a day full of inspiration, joy, and unforgettable memories! 🎉
 
-This Saturday, December 21, 2024 at 5:30 PM, we’re hosting a magical Christmas Party at 305 Schermerhorn St, Brooklyn—and you’re invited! 🌟
+Join us for a spiritual journey featuring:
 
-🎉 Here’s why you’ll love it:
-🎭 Special Drama Performance: Watch a heart-touching play that’s full of festive spirit!
-🎶 Dancing Kirtan: Feel the energy, move to the rhythm, and let your soul sing!
-🍛 Free Festive Dinner: Think mouthwatering, soul-nourishing food that will leave you glowing!
-🌟 Inspiring Talks & Cozy Vibes: A heartwarming evening to uplift and refresh you.
+✨ Enlightening Spiritual Talk by Tulasi Dasa (traveling monk, author, known for his ecstatic kirtans)
+🎭 Drama Performances – Witness incredible performances that will touch your heart!
+🕺🏼 Dancing kirtan – Let loose, groove to the beat, and celebrate with us!
+🍽️ Feast prasadam– have delicious prasadm and enjoy great company!
+and much more….
 
-✨ It’s Free. It’s Fun. It’s Unforgettable. 🎁
+🗓️ Date: 22nd February (Saturday)
+🕒 Time: 5.45 PM
+📍 Location: 305 Schermerhorn St. Brooklyn NY (ISKCON NYC)
 
-🎄 Bring your friends and let’s make this an evening to remember. Register on the link below to confirm your seat!
+Register NOW: https://www.gitalifenyc.com/registerbylink?phone={phone_number}
 
-https://www.gitalifenyc.com/registerbylink?phone={phone_number}"""
+See you soon 🎊"""
         present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
         registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
+        extra_message = f"""We have implemented one-click registration this time, so you don’t need to fill in your details manually. We would appreciate any feedback about it!"""
 
         if status == "To be reached out":
+            # continue
             message = first_message
         elif status == "No" or status == "Numer Invalid / Moved out of NYC":
             continue
@@ -165,10 +182,17 @@ https://www.gitalifenyc.com/registerbylink?phone={phone_number}"""
             message = present_message
             # print("ERROR STATUS FOR ", first_name)
             # exit(1)
-        elif status == "registered_but_did_not_present":
-            print("ERROR STATUS FOR ", first_name)
-            exit(1)
+        elif status == "Maybe/Will try, registration link sent":
+            continue
+            message = ""
+        # elif status == "registered_but_did_not_present":
+        #     if True:
+        #         print("ERROR STATUS FOR ", first_name)
+            # exit(1)
+        elif status == "mataji, didn't reach out":
+            continue
         else :
+            continue
             print("CASE NOT COVERED ERROR. STATUS : ", status)
             exit(1)
         
@@ -177,14 +201,16 @@ https://www.gitalifenyc.com/registerbylink?phone={phone_number}"""
             print("Sending Message :", message)
             # phone_number = "+919045907963"
             # Send the message (using the 24-hour format for the time)
-            kit.sendwhatmsg_instantly(phone_number, message, wait_time=7, tab_close=False)
-            # kit.sendwhats_image(phone_number, IMAGE_PATH, message, wait_time=7, tab_close=False)
-            time.sleep(5)
+            # kit.sendwhatmsg_instantly(phone_number, message, wait_time=7, tab_close=False)
+            kit.sendwhats_image(phone_number, IMAGE_PATH, message, wait_time=7, tab_close=False)
+            time.sleep(7)
             take_screenshot(os.path.join("./screenshots", first_name + "___" + phone_number + ".png"))
             core.close_tab(wait_time=0)
 
             row['Name'] = row['Name'] + '(Done)'
             df_include.to_csv(DATABASE_PATH_INCLUDE)
+
+    print()
 
 
 print("Messages sent successfully!")
