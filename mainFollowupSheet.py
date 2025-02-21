@@ -30,13 +30,14 @@ def get_pure_numbers_string(number_string):
         numbers[ind] = result
     return numbers
 
-# Read the inputs 
-i = 1
-DATABASE_PATH_INCLUDE = sys.argv[i]
-i += 1
-if len(sys.argv) >= 5:
-    DATABASE_PATH_EXCLUDE = sys.argv[i]
-    i += 1
+# Read the inputs
+followup_sheet_name_ind = sys.argv.index("followup_sheet_name")
+DATABASE_PATH_INCLUDE = sys.argv[followup_sheet_name_ind + 1]
+
+if "database_path_exclude" in sys.argv:
+    database_path_exclude_ind = sys.argv.index("database_path_exclude")
+    DATABASE_PATH_EXCLUDE = sys.argv[database_path_exclude_ind + 1]
+
     df_exclude = pd.read_csv(DATABASE_PATH_EXCLUDE)
     numbers_to_exclude = []
     for index, row in df_exclude.iterrows():
@@ -55,9 +56,10 @@ if len(sys.argv) >= 5:
             phone_numbers_string_list = get_pure_numbers_string(phone_numbers_string)
             numbers_to_exclude.extend(phone_numbers_string_list)
 
-START_ROW_NUMBER = int(sys.argv[i])
-i += 1
-END_ROW_NUMBER = int(sys.argv[i])
+followup_sheet_range_ind = sys.argv.index("followup_sheet_range")
+
+START_ROW_NUMBER = int(sys.argv[followup_sheet_range_ind + 1])
+END_ROW_NUMBER = int(sys.argv[followup_sheet_range_ind + 2])
 # row number in sheet = index + 2
 START_INDEX = START_ROW_NUMBER - 2
 END_INDEX = END_ROW_NUMBER - 2
@@ -74,6 +76,57 @@ if not os.path.isfile(IMAGE_PATH):
 df_include = pd.read_csv(DATABASE_PATH_INCLUDE)
 
 numbers_not_on_whatsapp = json.load(open('numbers_not_on_whatsapp.json'))['numbers']
+extra_numbers = json.load(open('extra_numbers.json'))['Extra Numbers']
+
+registered_message = ""
+reminder_message = ""
+first_message = ""
+present_message = ""
+registered_but_did_not_present_message = ""
+extra_message = ""
+
+def initialize_messages(phone_number, first_name = ""):
+    global registered_message, reminder_message, first_message, present_message, registered_but_did_not_present_message, extra_message
+    registered_message = f"""🎉 Hare Krishna!🎉
+Join us for a Spectacular Evening! 
+
+📅 Today is the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
+
+📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn
+
+⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.
+
+🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. 
+
+If you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).
+
+Can't wait to see you there! 🙏"""
+    # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
+    reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
+    first_message = f"""Hi {first_name}!
+    
+🌟 Gita Life NYC invites you for our 21st Monthly Youth Festival! 🌟
+
+Get ready for an evening filled with inspiration, joy, and unforgettable memories! 🎉
+
+Join us for a spiritual journey featuring:
+
+✨ Enlightening Spiritual Talk by Tulasi Prabhu (traveling monk, author, known for his ecstatic kirtans)
+🎭 Drama Performance – Witness incredible performances that will touch your heart!
+🕺🏼 Dancing kirtan – Let loose, groove to the beat, and celebrate with us!
+🍽️ Feast prasadam– have delicious prasadam and enjoy great company!
+and much more….
+
+🗓️ Date: 22nd February (Saturday)
+🕒 Time: 5.45 PM
+📍 Location: 305 Schermerhorn St. Brooklyn NY (ISKCON NYC)
+
+Register NOW: https://www.gitalifenyc.com/registerbylink?phone={phone_number}
+
+Share with your friends 🌟🌟🌟"""
+    present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
+    registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
+    extra_message = f"""We have implemented one-click registration this time, so you don’t need to fill in your details manually. We would appreciate any feedback about it!"""
 
 
 if not os.path.exists("./screenshots"):
@@ -82,7 +135,7 @@ if not os.path.exists("./screenshots"):
 # Iterate through each row in the DataFramels
 for index, row in df_include.iterrows():
     # if row['Column 1'] != None and str(row['Column 1']).strip() == 'Present':
-    #     continue
+    #     continuefollowup_sheet_range_ind
     # print(row['Column 1'], row['Column 1'] == 'Present')
     if index < START_INDEX or index > END_INDEX: # Taking only relevant rows
         continue
@@ -125,46 +178,7 @@ for index, row in df_include.iterrows():
         if True:
             print(f"Row Number in sheet : {index + 2}\nFirst name : {first_name}\nPhone number : {phone_number}\nStatus : {status}")
 
-        registered_message = f"""🎉 Hare Krishna!🎉
-Join us for a Spectacular Evening! 
-
-📅 Today is the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
-
-📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn
-
-⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.
-
-🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. 
-
-If you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).
-
-Can't wait to see you there! 🙏"""
-        # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
-        reminder_message = f"Hare Krishna {first_name}! 🙏🏻\n\nRegister Now!!! 👉 https://forms.gle/P64hwdFEdzbDYyL18"
-        first_message = f"""Hi {first_name}!
-        
-🌟 Gita Life NYC invites you for our 21st Monthly Youth Festival! 🌟
-
-Get ready for an evening filled with inspiration, joy, and unforgettable memories! 🎉
-
-Join us for a spiritual journey featuring:
-
-✨ Enlightening Spiritual Talk by Tulasi Prabhu (traveling monk, author, known for his ecstatic kirtans)
-🎭 Drama Performance – Witness incredible performances that will touch your heart!
-🕺🏼 Dancing kirtan – Let loose, groove to the beat, and celebrate with us!
-🍽️ Feast prasadam– have delicious prasadam and enjoy great company!
-and much more….
-
-🗓️ Date: 22nd February (Saturday)
-🕒 Time: 5.45 PM
-📍 Location: 305 Schermerhorn St. Brooklyn NY (ISKCON NYC)
-
-Register NOW: https://www.gitalifenyc.com/registerbylink?phone={phone_number}
-
-Share with your friends 🌟🌟🌟"""
-        present_message = f"I apologize for missing the feedback form's link! Here it is : https://forms.gle/HHsP7ZHcaGCHU9H68"
-        registered_but_did_not_present_message = f"Dear {first_name},\n\nWe noticed you weren’t able to join us for the Fall '24 Welcome Party at Gita Life NYC, and we just wanted to say we missed you! We had an amazing evening with kirtan, spiritual discussions, networking, and delicious prasadam.\n\nWe understand that sometimes plans change, but we hope to see you at our next event! Our community is here to support you in your journey of personal, professional, and spiritual growth.\n\nStay tuned for upcoming events, and feel free to reach out to us anytime.\n\nL ooking forward to meeting you soon,\nGita Life NYC Team"
-        extra_message = f"""We have implemented one-click registration this time, so you don’t need to fill in your details manually. We would appreciate any feedback about it!"""
+        initialize_messages(phone_number, first_name)
 
         if status == "To be reached out":
             # continue
@@ -211,6 +225,21 @@ Share with your friends 🌟🌟🌟"""
             df_include.to_csv(DATABASE_PATH_INCLUDE)
 
     print()
+
+
+if "extra_numbers_range" in sys.argv:
+    print("Handling Extra numbers now...")
+    extra_numbers_range_ind = sys.argv.index("extra_numbers_range")
+    extra_numbers_range_start_ind = int(sys.argv[extra_numbers_range_ind + 1])
+    extra_numbers_range_end_ind = int(sys.argv[extra_numbers_range_ind + 2])
+    for extra_number_ind, extra_number_number in extra_numbers[extra_numbers_range_start_ind : extra_numbers_range_end_ind + 1]:
+        print(f"Sending message to {extra_number_number}. Index in the list : {extra_number_ind}")
+        initialize_messages(extra_number_number)
+        # kit.sendwhatmsg_instantly(extra_number_number, first_message, wait_time=7, tab_close=False)
+        kit.sendwhats_image(extra_number_number, IMAGE_PATH, first_message, wait_time=7, tab_close=False)
+        time.sleep(1)
+        take_screenshot(os.path.join("./screenshots", extra_number_number + ".png"))
+        core.close_tab(wait_time=0)
 
 
 print("Messages sent successfully!")
