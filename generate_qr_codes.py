@@ -29,5 +29,4 @@ if __name__ == "__main__":
             save_path = f"qr_codes/{file_name}"
             generate_qr_code(url, save_path = save_path)
             df.loc[index, qr_codes_links_column] = os.path.join(github_repo_url, save_path)
-    breakpoint()
     df.to_csv(csv_file_path)
