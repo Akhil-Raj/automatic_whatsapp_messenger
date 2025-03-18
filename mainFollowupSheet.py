@@ -87,18 +87,21 @@ extra_message = ""
 
 def initialize_messages(phone_number, first_name = ""):
     global registered_message, reminder_message, first_message, present_message, registered_but_did_not_present_message, extra_message
-    registered_message = f"""🎉 Hare Krishna!🎉
+    registered_message = f"""Hi {first_name}!
+    
+🎉 Hare Krishna!🎉
+
 Join us for a Spectacular Evening! 
 
-📅 Today is the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
+📅 Today's the day! Don't miss out on our Monthly Youth Festival at ISKCON NYC. A night filled with divine joy, delicious prasadam, and spiritual enlightenment awaits you. 🌟
 
 📍 Venue: ISKCON NYC, 305 Schermerhorn St, Brooklyn
 
-⏰ Arrival Time: Be there by 5:30 PM sharp to immerse in the full experience.
+⏰ Event starting at 5.45 PM Sharp: please be there by the mentioned time so that program can be started on time. 
 
 🎟 Welcome Bands: Secure yours latest by 6:30 PM at the reception. It's your key to the delightful feast prasadam. 
 
-If you want to volunteer for different services, please feel free to contact (Sachin: 9296310021).
+If you want to volunteer for different services, please feel free to contact (Sachin: +1 646 739 4502).
 
 Can't wait to see you there! 🙏"""
     # reminder_message = registered_message.replace(f"🎉 Hare Krishna {first_name}!🎉", "REMINDER!!!") + "\n\nRegistration Link : https://forms.gle/BF4VDK9BGf1LGC7z8"
@@ -181,7 +184,7 @@ for index, row in df_include.iterrows():
         initialize_messages(phone_number, first_name)
 
         if status == "To be reached out":
-            # continue
+            continue
             message = first_message
         elif status == "No" or status == "Numer Invalid / Moved out of NYC":
             continue
@@ -189,7 +192,7 @@ for index, row in df_include.iterrows():
             continue
             message = reminder_message
         elif status == "Registered":
-            continue
+            # continue
             message = registered_message
         elif status == "Present":
             continue
